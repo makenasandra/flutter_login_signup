@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_signup/src/signup.dart';
+import 'package:flutter_login_signup/src/homePage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'Widget/bezierContainer.dart';
@@ -28,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
             ),
             Text('Back',
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500))
           ],
         ),
       ),
@@ -60,7 +61,12 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _submitButton() {
-    return Container(
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomePage()));
+      },
+      child: Container(
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 15),
       alignment: Alignment.center,
@@ -76,11 +82,12 @@ class _LoginPageState extends State<LoginPage> {
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+              colors: [Color(0xff028a0f), Color(0xffb0f3c8)])),
       child: Text(
         'Login',
         style: TextStyle(fontSize: 20, color: Colors.white),
       ),
+    )
     );
   }
 
@@ -172,7 +179,7 @@ class _LoginPageState extends State<LoginPage> {
             context, MaterialPageRoute(builder: (context) => SignUpPage()));
       },
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 20),
+        margin: EdgeInsets.symmetric(vertical: 1),
         padding: EdgeInsets.all(15),
         alignment: Alignment.bottomCenter,
         child: Row(
@@ -202,7 +209,7 @@ class _LoginPageState extends State<LoginPage> {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 'd',
+          text: 't',
           style: GoogleFonts.portLligatSans(
             textStyle: Theme.of(context).textTheme.display1,
             fontSize: 30,
@@ -211,11 +218,11 @@ class _LoginPageState extends State<LoginPage> {
           ),
           children: [
             TextSpan(
-              text: 'ev',
+              text: 'i',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'rnz',
+              text: 'zi',
               style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
             ),
           ]),
@@ -265,7 +272,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   _divider(),
                   _facebookButton(),
-                  SizedBox(height: height * .055),
+                  // SizedBox(height: 1),
                   _createAccountLabel(),
                 ],
               ),

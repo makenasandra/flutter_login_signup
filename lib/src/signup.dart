@@ -27,7 +27,7 @@ class _SignUpPageState extends State<SignUpPage> {
               child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
             ),
             Text('Back',
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500))
           ],
         ),
       ),
@@ -75,7 +75,7 @@ class _SignUpPageState extends State<SignUpPage> {
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+              colors: [Color(0xffb0fc38), Color(0xff03ac13)])),
       child: Text(
         'Register Now',
         style: TextStyle(fontSize: 20, color: Colors.white),
@@ -120,21 +120,21 @@ class _SignUpPageState extends State<SignUpPage> {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 'd',
+          text: 't',
           style: GoogleFonts.portLligatSans(
             textStyle: Theme.of(context).textTheme.display1,
-            fontSize: 30,
+            fontSize: 55,
             fontWeight: FontWeight.w700,
             color: Color(0xffe46b10),
           ),
           children: [
             TextSpan(
-              text: 'ev',
-              style: TextStyle(color: Colors.black, fontSize: 30),
+              text: 'i',
+              style: TextStyle(color: Colors.black, fontSize: 40),
             ),
             TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
+              text: 'zi',
+              style: TextStyle(color: Color(0xffe46b10), fontSize: 40),
             ),
           ]),
     );
